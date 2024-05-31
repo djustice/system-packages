@@ -1,0 +1,47 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=ad-miner
+_pkgname_dir=AD_Miner
+_pkgname_cmd=AD-miner
+_pyver=3.12
+pkgver=v1.3.0.r0.ge90625a
+pkgrel=1
+groups=('system' 'system-recon' 'system-windows')
+pkgdesc='Active Directory audit tool that extract data from Bloodhound to uncover security weaknesses and generate an HTML report'
+arch=('any')
+url='https://github.com/Mazars-Tech/AD_Miner'
+license=('GPL3')
+depends=('python' 'python-poetry')
+makedepends=('git')
+source=("$pkgname::git+https://github.com/Mazars-Tech/$_pkgname_dir.git")
+sha512sums=('SKIP')
+install="$pkgname.install"
+
+pkgver() {
+  cd $pkgname
+
+  git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+package() {
+  cd $pkgname
+
+  install -dm 755 "$pkgdir/usr/bin"
+  install -dm 755 "$pkgdir/usr/share/$pkgname"
+
+  rm -rf LICENSE .github .git* CONTRIBUTING.md
+
+  cp -a * "$pkgdir/usr/share/$pkgname/"
+
+  cat > "$pkgdir/usr/bin/$pkgname" << EOF
+#!/bin/sh
+poetry config cache-dir "/usr/share/$pkgname"
+poetry env use /usr/share/$pkgname/.venv/bin/python$_pyver \\
+  --directory /usr/share/$pkgname
+poetry run --directory "/usr/share/$pkgname" $_pkgname_cmd "\$@"
+EOF
+
+  chmod +x "$pkgdir/usr/bin/$pkgname"
+}
