@@ -1,0 +1,20 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=netcon
+pkgver=0.1
+pkgrel=2
+groups=('system' 'system-networking')
+pkgdesc='A network connection establishment and management script.'
+arch=('any')
+url='https://github.com/BlackArch/netcon'
+depends=('bash')
+license=('custom')
+source=("https://raw2.github.com/BlackArch/netcon/master/$pkgname.sh")
+sha512sums=('014a0756be2e38dd4508aabc8f932b05724f8b5f')
+
+package() {
+  install -Dm 755 "$pkgname.sh" "$pkgdir/usr/bin/$pkgname"
+}
+

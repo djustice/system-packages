@@ -3,8 +3,8 @@
 #
 
 pkgname=ad-ldap-enum
-pkgver=88.60bc5bb
-pkgrel=4
+pkgver=.60bc5bb
+pkgrel=1
 pkgdesc='An LDAP based Active Directory user and group enumeration tool.'
 groups=('system' 'system-recon')
 arch=('any')

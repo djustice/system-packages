@@ -1,0 +1,41 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=system-config-lxdm
+pkgver=20.b109457
+pkgrel=1
+pkgdesc='BlackArch config for lxdm X11 login manager.'
+arch=('any')
+groups=('system-config')
+url='https://github.com/BlackArch/system-config-lxdm'
+license=('custom')
+depends=('lxdm' 'system-wallpaper' 'terminus-font')
+makedepends=('git')
+source=('git+https://github.com/BlackArch/system-config-lxdm.git')
+sha512sums=('SKIP')
+install="$pkgname.install"
+
+pkgver() {
+  cd $pkgname
+
+  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+}
+
+package() {
+  cd $pkgname
+
+  install -dm 755 "$pkgdir/etc/lxdm-system/"
+  install -dm 755 "$pkgdir/usr/share/system/"
+  install -dm 755 "$pkgdir/usr/share/lxdm-system/"
+  install -dm 755 "$pkgdir/usr/share/xsessions-system/"
+
+  cp -p -r etc/lxdm/* "$pkgdir/etc/lxdm-system/"
+  cp -p -r usr/share/system/* "$pkgdir/usr/share/system/"
+  cp -p -r usr/share/lxdm/* "$pkgdir/usr/share/lxdm-system/"
+  cp -p -r usr/share/xsessions/* "$pkgdir/usr/share/xsessions-system/"
+
+  #wallpaper.png clashes with system-wallpaper dependency
+  mv $pkgdir/usr/share/system/wallpaper{,-cyberpunk}.png
+}
+

@@ -1,0 +1,24 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=pmap
+pkgver=1.10
+pkgrel=4
+pkgdesc='Passively discover, scan, and fingerprint link-local peers by the background noise they generate (i.e. their broadcast and multicast traffic).'
+url='http://www.hellfiresecurity.com/tools.htm'
+groups=('system' 'system-windows' 'system-recon' 'system-scanner'
+        'system-fingerprint')
+license=('custom:unknown')
+arch=('any')
+source=("http://downloads.sourceforge.net/project/passivemapper/pMap%20v$pkgver%20for%20Windows.zip")
+sha512sums=('bf8c4d210d533a1cc1ca84bc9daadfc6cd5063659a39b1024a01597cc22df47a4bc7dc950d620cbc9e71fe8e01f5c2969f5f2c01b30560c65cb70e22d1ec42ea')
+
+package() {
+  install -dm 755 "$pkgdir/usr/share/windows/$pkgname"
+
+  rm "pMap%20v$pkgver%20for%20Windows.zip"
+
+  cp -a * "$pkgdir/usr/share/windows/$pkgname"
+}
+

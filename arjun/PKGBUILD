@@ -3,8 +3,8 @@
 #
 
 pkgname=arjun
-pkgver=234.16ee735
-pkgrel=2
+pkgver=.16ee735
+pkgrel=1
 pkgdesc='HTTP parameter discovery suite.'
 groups=('system' 'system-webapp' 'system-scanner')
 arch=('any')

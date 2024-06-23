@@ -3,8 +3,8 @@
 #
 
 pkgname=androbugs
-pkgver=1.7fd3a2c
-pkgrel=2
+pkgver=.7fd3a2c
+pkgrel=1
 pkgdesc='An efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications.'
 groups=('system' 'system-mobile')
 arch=('any')

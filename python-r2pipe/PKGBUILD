@@ -1,0 +1,49 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgbase=python-r2pipe
+pkgname=('python2-r2pipe' 'python-r2pipe')
+_pkgname=r2pipe
+pkgver=1.8.8
+pkgrel=1
+pkgdesc='Pipe interface for radare2.'
+arch=('any')
+url='https://pypi.org/project/r2pipe/#files'
+license=('MIT')
+makedepends=('python2-setuptools' 'python-setuptools')
+source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
+sha512sums=('65aa61f522a6dd3200151f5706a02c6f07c6ccf2af556f8b51b8b1d4a08ece8e1e05d72129ffc94ed0cdd6e5cf115ea5b8dee87f01a802c3db5a2f9ea4dc9ff6')
+
+prepare() {
+  cp -a "$_pkgname-$pkgver"{,-2}
+}
+
+build() {
+  cd "$_pkgname-$pkgver-2"
+
+  python2 setup.py build
+
+  cd "$srcdir/$_pkgname-$pkgver"
+
+  python setup.py build
+}
+
+package_python2-r2pipe() {
+  depends=('python2')
+
+  cd "$_pkgname-$pkgver-2"
+
+  python2 setup.py install --prefix=/usr --root="$pkgdir" --optimize=1 \
+    --skip-build
+}
+
+package_python-r2pipe() {
+  depends=('python')
+
+  cd "$_pkgname-$pkgver"
+
+  python setup.py install --prefix=/usr --root="$pkgdir" --optimize=1 \
+    --skip-build
+}
+

@@ -1,0 +1,32 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=dependency-check
+pkgver=9.0.9
+pkgrel=1
+pkgdesc="A tool that attempts to detect publicly disclosed vulnerabilities contained within a project's dependencies."
+groups=('system' 'system-defensive' 'system-scanner')
+arch=('any')
+url='https://github.com/jeremylong/DependencyCheck/releases/'
+license=('APACHE')
+depends=('bash' 'java-environment')
+source=("https://github.com/jeremylong/DependencyCheck/releases/download/v$pkgver/$pkgname-$pkgver-release.zip")
+sha512sums=('b42a7f7a2b109a44b5f0f4a050096ab05f3965abf69538f2b086308e8708447ef13764bc4460388ca7d56667e678be3e85d1faafa5ec02cc40e78355c25af3de')
+
+package() {
+  cd $pkgname
+
+  install -dm 755 "$pkgdir/usr/bin"
+  install -dm 755 "$pkgdir/usr/share/$pkgname"
+
+  cp -a * "$pkgdir/usr/share/$pkgname/"
+
+  cat > "$pkgdir/usr/bin/$pkgname" << EOF
+#!/bin/sh
+cd /usr/share/$pkgname/bin
+exec bash $pkgname.sh "\$@"
+EOF
+
+  chmod +x "$pkgdir/usr/bin/$pkgname"
+}

@@ -1,0 +1,50 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgbase=python-publicsuffixlist
+pkgname=('python2-publicsuffixlist' 'python-publicsuffixlist')
+_pkgname=publicsuffixlist
+pkgver=0.10.0.20240515
+pkgrel=1
+pkgdesc='Python publicsuffixlist implementation.'
+arch=('any')
+url='https://pypi.python.org/pypi/publicsuffixlist'
+license=('MPL')
+makedepends=('python2-setuptools' 'python-setuptools' 'python2-pip' 'python-pip'
+             'python2-wheel' 'python-wheel')
+source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
+sha512sums=('d325d213a53655526f71c917b388921c037e831200e1ddce817aadeb92dc6320a12001b79b4d2d1d7b952c7b8225da655fc8d6f57fc2426c3f14f170320cc894')
+
+prepare() {
+  cp -a "$_pkgname-$pkgver"{,-2}
+}
+
+build() {
+  cd "$_pkgname-$pkgver-2"
+
+  python2 setup.py build
+
+  cd "$srcdir/$_pkgname-$pkgver"
+
+  python setup.py build
+}
+
+package_python2-publicsuffixlist() {
+  depends=('python2' 'python2-requests')
+
+  cd "$_pkgname-$pkgver-2"
+
+  python2 setup.py install --prefix=/usr --root="$pkgdir" -O1 --skip-build
+
+  mv "$pkgdir/usr/bin/$_pkgname-download" "$pkgdir/usr/bin/$_pkgname-download2"
+}
+
+package_python-publicsuffixlist() {
+  depends=('python' 'python-requests')
+
+  cd "$_pkgname-$pkgver"
+
+  python setup.py install --prefix=/usr --root="$pkgdir" -O1 --skip-build
+}
+

@@ -1,0 +1,37 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=whispers
+pkgver=2.2.1.r3.g8f17f77
+pkgrel=2
+pkgdesc='Identify hardcoded secrets in static structured text.'
+arch=('any')
+groups=('system' 'system-code-audit')
+url='https://github.com/adeptex/whispers/'
+license=('GPL3')
+depends=('python' 'python-astroid' 'python-beautifulsoup4' 'python-jproperties'
+         'python-jellyfish' 'python-luhn' 'python-lxml' 'python-yaml'
+         'python-crossplane')
+makedepends=('git' 'python-setuptools' 'python-pip')
+source=("git+https://github.com/adeptex/$pkgname.git")
+sha512sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+
+  git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+build() {
+  cd $pkgname
+
+  python setup.py build
+}
+
+package() {
+  cd $pkgname
+
+  python setup.py install --root="$pkgdir" --prefix=/usr -O1 --skip-build
+}
+

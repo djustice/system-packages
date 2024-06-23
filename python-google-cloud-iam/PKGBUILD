@@ -1,0 +1,30 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=python-google-cloud-iam
+_pkgname=google-cloud-iam
+pkgver=2.15.0
+pkgrel=1
+pkgdesc='IAM Service Account Credentials API client library.'
+arch=('any')
+url='https://pypi.org/project/google-cloud-iam/#files'
+license=('Apache')
+depends=('python')
+makedepends=('python-setuptools')
+source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
+sha512sums=('c741e94ad2081fbaf7447a6662c60f891bfa6ff7e56040bd1b58fef367fc04ec002dc1dbe6f368429ce155c4eeaeb4bcd81d764cc80c441e51a46846c2194da1')
+
+build() {
+  cd "$_pkgname-$pkgver"
+
+  python setup.py build
+}
+
+package() {
+  cd "$_pkgname-$pkgver"
+
+  python setup.py install --prefix=/usr --root="$pkgdir" --optimize=1 \
+    --skip-build
+}
+

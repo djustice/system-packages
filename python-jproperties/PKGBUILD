@@ -1,0 +1,34 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=python-jproperties
+pkgver=v2.1.1.r0.gaffc3e7
+pkgrel=4
+pkgdesc='Java Property file parser and writer for Python.'
+arch=('any')
+url='https://github.com/Tblue/python-jproperties'
+license=('BSD')
+depends=('python' 'python-six')
+makedepends=('git' 'python-setuptools' 'python-pip')
+source=("git+https://github.com/Tblue/$pkgname.git")
+sha512sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+
+  git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+build() {
+  cd $pkgname
+
+  python setup.py build
+}
+
+package() {
+  cd $pkgname
+
+  python setup.py install --root="$pkgdir" --prefix=/usr -O1 --skip-build
+}
+

@@ -3,7 +3,7 @@
 #
 
 pkgname=adape-script
-pkgver=43.4d0b9ff
+pkgver=.4d0b9ff
 pkgrel=1
 pkgdesc='Active Directory Assessment and Privilege Escalation Script.'
 arch=('x86_64')

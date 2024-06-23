@@ -3,8 +3,8 @@
 #
 
 pkgname=arybo
-pkgver=65.89d9a42
-pkgrel=6
+pkgver=.89d9a42
+pkgrel=1
 pkgdesc='Manipulation, canonicalization and identification of mixed boolean-arithmetic symbolic expressions.'
 groups=('system' 'system-misc')
 arch=('any')

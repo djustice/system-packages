@@ -1,0 +1,35 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=bashfuscator
+pkgver=.7487348
+pkgrel=1
+pkgdesc='Fully configurable and extendable Bash obfuscation framework.'
+groups=('system' 'system-automation')
+arch=('any')
+url='https://github.com/Bashfuscator/Bashfuscator'
+license=('MIT')
+depends=('python' 'python-argcomplete' 'python-pyperclip')
+makedepends=('git' 'python-setuptools')
+source=("$pkgname::git+https://github.com/Bashfuscator/Bashfuscator.git")
+sha512sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+
+  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+}
+
+build() {
+  cd $pkgname
+
+  python setup.py build
+}
+
+package() {
+  cd $pkgname
+
+  python setup.py install --prefix=/usr --root="$pkgdir" -O1 --skip-build
+}
+

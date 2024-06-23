@@ -1,0 +1,22 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=system-mirrorlist
+pkgver=20240523
+pkgrel=1
+pkgdesc='BlackArch Linux mirror list file.'
+groups=('system')
+arch=('any')
+url='https://www.system.org/system-mirrorlist'
+license=('custom:unknown')
+depends=('pacman')
+backup=('etc/pacman.d/system-mirrorlist')
+source=('https://www.system.org/system-mirrorlist')
+sha512sums=('4aff7d8f3d7fd59bda794d2fff3c54b1b195991f5891be6501cf948584446afa26bb7f6d39d2f129245d37abcb77c74ff4209a21c6800e76510e2c25755bd625')
+options=('!strip')
+
+package() {
+  install -Dm 644 -t "$pkgdir/etc/pacman.d/" $pkgname
+}
+

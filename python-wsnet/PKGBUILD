@@ -1,0 +1,35 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=python-wsnet
+_pkgname=${pkgname#python-}
+pkgver=0.0.14.r0.gc27ad47
+pkgrel=2
+pkgdesc='A lightweight protocol implementation to perform TCP and authentication proxying over websockets.'
+arch=('any')
+url='https://github.com/skelsec/wsnet'
+license=('custom:unknown')
+depends=('python' 'python-websockets' 'python-aiohttp')
+makedepends=('git' 'python-setuptools')
+source=("git+https://github.com/skelsec/$_pkgname.git")
+sha512sums=('SKIP')
+
+pkgver() {
+  cd ${pkgname#python-}
+
+  git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+build() {
+  cd ${pkgname#python-}
+
+  python setup.py build
+}
+
+package() {
+  cd ${pkgname#python-}
+
+  python setup.py install --root="$pkgdir" --prefix=/usr -O1 --skip-build
+}
+

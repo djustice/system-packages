@@ -1,0 +1,45 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=cmseek
+pkgver=382.20f9780
+pkgrel=2
+pkgdesc='CMS (Content Management Systems) Detection and Exploitation suite.'
+groups=('system' 'system-webapp' 'system-fingerprint'
+        'system-exploitation')
+arch=('any')
+url='https://github.com/Tuhinshubhra/CMSeeK'
+license=('GPL3')
+depends=('python' 'python-requests')
+makedepends=('git')
+source=("$pkgname::git+https://github.com/Tuhinshubhra/CMSeeK.git")
+sha512sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+
+  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+}
+
+package() {
+  cd $pkgname
+
+  install -dm 755 "$pkgdir/usr/bin"
+  install -dm 755 "$pkgdir/usr/share/$pkgname"
+
+  install -Dm 644 -t "$pkgdir/usr/share/doc/$pkgname/" README.md CHANGELOG
+  install -Dm 644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+
+  rm README.md CHANGELOG LICENSE
+
+  cp -a * "$pkgdir/usr/share/$pkgname/"
+
+  cat > "$pkgdir/usr/bin/$pkgname" << EOF
+#!/bin/sh
+exec python3 /usr/share/$pkgname/$pkgname.py "\$@"
+EOF
+
+  chmod +x "$pkgdir/usr/bin/$pkgname"
+}
+

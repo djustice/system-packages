@@ -1,0 +1,32 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=system-config-cursor
+pkgver=3.08b06e5
+pkgrel=1
+pkgdesc='BlackArch cursor theme.'
+arch=('any')
+groups=('system-config')
+url='https://github.com/BlackArch/system-config-cursor'
+license=('custom:unknown')
+depends=('libxcursor')
+makedepends=('git')
+source=("git+https://github.com/BlackArch/$pkgname.git")
+sha512sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+
+  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+}
+
+package() {
+  cd $pkgname
+
+  install -dm 755 "$pkgdir/usr/share/icons/system-cursor"
+  install -Dm 644 -t "$pkgdir/usr/share/doc/$pkgname/" README.md
+
+  cp -at "$pkgdir/usr/share/icons/system-cursor" index.theme cursors
+}
+

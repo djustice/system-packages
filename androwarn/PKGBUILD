@@ -3,8 +3,8 @@
 #
 
 pkgname=androwarn
-pkgver=135.626c02d
-pkgrel=6
+pkgver=.626c02d
+pkgrel=1
 pkgdesc='Yet another static code analyzer for malicious Android applications.'
 groups=('system' 'system-mobile' 'system-code-audit')
 arch=('any')

@@ -1,0 +1,43 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=radare2-unicorn
+pkgver=851.167e5c4
+pkgrel=1
+pkgdesc='Unicorn Emulator Plugin for radare2.'
+groups=('system' 'system-disassembler' 'system-binary'
+        'system-reversing')
+arch=('x86_64' 'aarch64')
+url='https://github.com/radare/radare2-extras/tree/master/unicorn'
+license=('GPL3')
+depends=('radare2' 'unicorn' 'unicorn' 'yara' 'openssl' 'jansson' 'capstone')
+makedepends=('git' 'pkg-config')
+source=("$pkgname::git+https://github.com/radare/radare2-extras.git")
+install="$pkgname.install"
+sha512sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+
+  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+}
+
+build() {
+  cd $pkgname
+
+  ./configure --prefix=/usr
+
+  make unicorn
+
+  cd unicorn
+
+  make
+}
+
+package() {
+  cd $pkgname
+
+  make DESTDIR="$pkgdir" unicorn-install
+}
+

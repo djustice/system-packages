@@ -1,0 +1,47 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgbase=python-ailment
+pkgname=('python2-ailment' 'python-ailment')
+_pkgname=ailment
+pkgver=9.2.102
+pkgrel=1
+pkgdesc='The angr Imtermediate Language.'
+arch=('any')
+url='https://pypi.org/project/ailment/#files'
+license=('BSD')
+makedepends=('python2-setuptools' 'python-setuptools')
+source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
+sha512sums=('4742cde730b71166d50efa6afb5688d82228d6d6a14389ef6dda200311ceb49f320baf567317ae9b56827bcae5ab522d44131442e64da8010b9f96996b0d98e7')
+
+prepare() {
+  cp -a "$_pkgname-$pkgver"{,-2}
+}
+
+build() {
+  cd "$_pkgname-$pkgver-2"
+
+  python2 setup.py build
+
+  cd "$srcdir/$_pkgname-$pkgver"
+
+  python setup.py build
+}
+
+package_python2-ailment() {
+  depends=('python2')
+
+  cd "$_pkgname-$pkgver-2"
+
+  python2 setup.py install --root="$pkgdir" --prefix=/usr -O1 --skip-build
+}
+
+package_python-ailment() {
+  depends=('python')
+
+  cd "$_pkgname-$pkgver"
+
+  python setup.py install --root="$pkgdir" --prefix=/usr -O1 --skip-build
+}
+

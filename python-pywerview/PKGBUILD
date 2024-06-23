@@ -1,0 +1,30 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=python-pywerview
+_pkgname=pywerview
+pkgver=0.6
+pkgrel=1
+pkgdesc="A Python port of PowerSploit's PowerView'."
+arch=('any')
+url='https://pypi.org/project/pywerview/#files'
+license=('GPL3')
+depends=('python' 'python-pyasn1' 'python-gssapi'
+         'python-ldap3' 'python-beautifulsoup4' 'impacket' 'python-lxml' )
+makedepends=('python-setuptools')
+source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
+sha512sums=('3231aaef790b8344754f06ae959f7d97f90fa5021bb2c351786f4ea9dd16cc597452e910760626c03de481f43636935613686bc23ffcbcc5033d594e29bae15f')
+
+build() {
+  cd "$_pkgname-$pkgver"
+
+  python setup.py build
+}
+
+package() {
+  cd "$_pkgname-$pkgver"
+
+  python setup.py install --root="$pkgdir" --prefix=/usr -O1 --skip-build
+}
+

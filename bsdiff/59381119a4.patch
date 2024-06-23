@@ -1,0 +1,80 @@
+From 59381119a4c0b13088daea263ddd543d9bba5a16 Mon Sep 17 00:00:00 2001
+From: emaste <emaste@FreeBSD.org>
+Date: Tue, 6 Sep 2016 19:00:37 +0000
+Subject: [PATCH] bspatch: add sanity checks on sizes to avoid integer overflow
+
+Note that this introduces an explicit 2GB limit, but this was already
+implicit in variable and function argument types.
+
+This is based on the "non-cryptanalytic attacks against freebsd
+update components" anonymous gist. Further refinement is planned.
+
+Reviewed by:	allanjude, cem, kib
+Obtained from:	anonymous gist
+MFC after:	3 days
+Sponsored by:	The FreeBSD Foundation
+Differential Revision:	https://reviews.freebsd.org/D7619
+---
+ usr.bin/bsdiff/bspatch/bspatch.c | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+
+diff --git a/usr.bin/bsdiff/bspatch/bspatch.c b/usr.bin/bsdiff/bspatch/bspatch.c
+index 5f6679c58f8cee..4e65dcdb7840a0 100644
+--- a/usr.bin/bsdiff/bspatch/bspatch.c
++++ b/usr.bin/bsdiff/bspatch/bspatch.c
+@@ -43,6 +43,7 @@ __FBSDID("$FreeBSD$");
+ #include <errno.h>
+ #include <fcntl.h>
+ #include <libgen.h>
++#include <limits.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -98,8 +99,8 @@ int main(int argc, char *argv[])
+ 	char *directory, *namebuf;
+ 	int cbz2err, dbz2err, ebz2err;
+ 	int newfd, oldfd;
+-	ssize_t oldsize, newsize;
+-	ssize_t bzctrllen, bzdatalen;
++	off_t oldsize, newsize;
++	off_t bzctrllen, bzdatalen;
+ 	u_char header[32], buf[8];
+ 	u_char *old, *new;
+ 	off_t oldpos, newpos;
+@@ -194,7 +195,9 @@ int main(int argc, char *argv[])
+ 	bzctrllen = offtin(header + 8);
+ 	bzdatalen = offtin(header + 16);
+ 	newsize = offtin(header + 24);
+-	if ((bzctrllen < 0) || (bzdatalen < 0) || (newsize < 0))
++	if (bzctrllen < 0 || bzctrllen > OFF_MAX - 32 ||
++	    bzdatalen < 0 || bzctrllen + 32 > OFF_MAX - bzdatalen ||
++	    newsize < 0 || newsize > SSIZE_MAX)
+ 		errx(1, "Corrupt patch\n");
+ 
+ 	/* Close patch file and re-open it via libbzip2 at the right places */
+@@ -217,12 +220,13 @@ int main(int argc, char *argv[])
+ 		errx(1, "BZ2_bzReadOpen, bz2err = %d", ebz2err);
+ 
+ 	if ((oldsize = lseek(oldfd, 0, SEEK_END)) == -1 ||
+-	    (old = malloc(oldsize+1)) == NULL ||
++	    oldsize > SSIZE_MAX ||
++	    (old = malloc(oldsize)) == NULL ||
+ 	    lseek(oldfd, 0, SEEK_SET) != 0 ||
+ 	    read(oldfd, old, oldsize) != oldsize ||
+ 	    close(oldfd) == -1)
+ 		err(1, "%s", argv[1]);
+-	if ((new = malloc(newsize + 1)) == NULL)
++	if ((new = malloc(newsize)) == NULL)
+ 		err(1, NULL);
+ 
+ 	oldpos = 0;
+@@ -238,7 +242,8 @@ int main(int argc, char *argv[])
+ 		}
+ 
+ 		/* Sanity-check */
+-		if ((ctrl[0] < 0) || (ctrl[1] < 0))
++		if (ctrl[0] < 0 || ctrl[0] > INT_MAX ||
++		    ctrl[1] < 0 || ctrl[1] > INT_MAX)
+ 			errx(1, "Corrupt patch\n");
+ 
+ 		/* Sanity-check */

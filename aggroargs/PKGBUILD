@@ -3,7 +3,7 @@
 #
 
 pkgname=aggroargs
-pkgver=51.c032446
+pkgver=.c032446
 pkgrel=1
 groups=('system' 'system-exploitation' 'system-fuzzer')
 pkgdesc='Bruteforce commandline buffer overflows, linux, aggressive arguments.'

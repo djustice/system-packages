@@ -1,0 +1,30 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=python-google-cloud-container
+_pkgname=google-cloud-container
+pkgver=2.45.0
+pkgrel=1
+pkgdesc='Google Container Engine API client library.'
+arch=('any')
+url='https://pypi.org/project/google-cloud-container/#files'
+license=('Apache')
+depends=('python' 'python-google-api-core')
+makedepends=('python-setuptools')
+source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
+sha512sums=('f663da5856f62bbdbd16fa3e6687c3ea2ea4f22fb7afdcc52ff6ab21d0a359b4442a50ccd70a1505a4ad2e07d37c712a6d69fecbcb86049757a45ffad5472693')
+
+build() {
+  cd "$_pkgname-$pkgver"
+
+  python setup.py build
+}
+
+package() {
+  cd "$_pkgname-$pkgver"
+
+  python setup.py install --prefix=/usr --root="$pkgdir" --optimize=1 \
+    --skip-build
+}
+

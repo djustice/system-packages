@@ -1,0 +1,48 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=suricata
+pkgver=6.0.19
+pkgrel=1
+pkgdesc='An Open Source Next Generation Intrusion Detection and Prevention Engine.'
+arch=('x86_64' 'aarch64')
+url='https://suricata.io/download/'
+groups=('system' 'system-defensive' 'system-ids')
+license=('GPL2')
+depends=('zlib' 'nss' 'jansson' 'libcap-ng' 'libnetfilter_queue' 'libnfnetlink'
+         'libnet' 'libpcap' 'libyaml' 'pcre' 'python-magic' 'file' 'lua'
+         'luajit' 'geoip' 'libnetfilter_log' 'libmaxminddb')
+makedepends=('cargo')
+optdepends=('snort: suricata can use rulesets provided by snort')
+backup=('etc/suricata/suricata.yaml')
+source=("http://openinfosecfoundation.org/download/$pkgname-$pkgver.tar.gz")
+sha512sums=('d03ba5792fe1358a12103e12f7c6f52736f94ccd8803b6367b1138e854d30e496ed4fb5e72443f65d351fdef4e3836e1c1f4dd89154568083e56b41922f0cb0e')
+
+build() {
+  cd "$pkgname-$pkgver"
+
+  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+    HAVE_PYTHON_CONFIG=/usr/bin/python3 --enable-gccprotect \
+    --enable-nfqueue --enable-nflog --enable-luajit --enable-geoip \
+    --disable-coccinelle --enable-old-barnyard2 --with-pic \
+    --enable-python
+
+  make
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+
+  install -dm 755 "$pkgdir/var/log/$pkgname"
+  install -dm 755 "$pkgdir/etc/$pkgname/rules"
+
+  make DESTDIR="$pkgdir" install
+
+  install -Dm 644 "$pkgname.yaml" "$pkgdir/etc/$pkgname/$pkgname.yaml"
+  install -Dm 644 etc/classification.config \
+    "$pkgdir/etc/$pkgname/classification.config"
+  install -Dm 644 etc/reference.config "$pkgdir/etc/$pkgname/reference.config"
+  install -Dm 644 rules/*.rules "$pkgdir/etc/$pkgname/rules/"
+}
+

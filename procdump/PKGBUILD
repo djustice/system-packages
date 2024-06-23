@@ -1,0 +1,38 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=procdump
+pkgver=119.03aa1b1
+pkgrel=1
+pkgdesc='Generate coredumps based off performance triggers.'
+arch=('x86_64' 'aarch64')
+groups=('system' 'system-binary' 'system-misc')
+url='https://github.com/Microsoft/ProcDump-for-Linux'
+license=('MIT')
+depends=('gdb')
+makedepends=('git')
+source=("$pkgname::git+https://github.com/Microsoft/ProcDump-for-Linux.git")
+sha512sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+
+  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+}
+
+build() {
+  cd $pkgname
+
+  make -j1
+}
+
+package() {
+  cd $pkgname
+
+  install -Dm 755 "bin/$pkgname" "$pkgdir/usr/bin/$pkgname"
+  install -Dm 644 -t "$pkgdir/usr/share/doc/$pkgname" *.md
+  install -Dm 644 "$pkgname.1" "$pkgdir/usr/share/man/man1/$pkgname.1"
+  install -Dm 644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
+

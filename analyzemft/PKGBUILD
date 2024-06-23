@@ -3,7 +3,7 @@
 #
 
 pkgname=analyzemft
-pkgver=133.b6ed04f
+pkgver=.b6ed04f
 pkgrel=1
 pkgdesc='Parse the MFT file from an NTFS filesystem.'
 groups=('system' 'system-forensic')

@@ -1,0 +1,34 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=persistencesniper
+pkgver=v1.16.0.r4.g6687a26
+pkgrel=1
+groups=('system' 'system-defensive' 'system-windows')
+pkgdesc='Hunt persistences implanted in Windows machines.'
+url='https://github.com/last-byte/PersistenceSniper'
+arch=('any')
+license=('MIT')
+makedepends=('git')
+source=("git+https://github.com/last-byte/$pkgname.git")
+sha512sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+
+  git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+package() {
+  cd $pkgname
+
+  install -dm 755 "$pkgdir/usr/share/windows/$pkgname"
+
+  cp -a --no-preserve=ownership PersistenceSniper/* \
+    "$pkgdir/usr/share/windows/$pkgname"
+
+  install -Dm 644 -t "$pkgdir/usr/share/doc/$pkgname/" *.md
+  install -Dm 644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
+

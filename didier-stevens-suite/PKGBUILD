@@ -1,0 +1,29 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=didier-stevens-suite
+pkgver=386.8eb5a11
+pkgrel=1
+groups=('system')
+pkgdesc='Didier Stevens Suite.'
+arch=('any')
+url='https://github.com/DidierStevens/DidierStevensSuite'
+makedepends=('git')
+source=("$pkgname::git+https://github.com/DidierStevens/DidierStevensSuite.git")
+sha512sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+
+  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+}
+
+package() {
+  cd $pkgname
+
+  install -dm 755 "$pkgdir/usr/share/$pkgname"
+
+  cp -a ./* "$pkgdir/usr/share/$pkgname/"
+}
+

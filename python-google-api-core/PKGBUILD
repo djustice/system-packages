@@ -1,0 +1,30 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=python-google-api-core
+_pkgname=google-api-core
+pkgver=2.19.0
+pkgrel=1
+pkgdesc='Google API client core library.'
+arch=('any')
+url='https://pypi.org/project/google-api-core/#files'
+license=('Apache')
+depends=('python' 'python-googleapis-common-protos' 'python-pytz')
+makedepends=('python-setuptools')
+source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
+sha512sums=('43755ad4f9f9523b902505c02c5a0c870b14fb4922343c94f2dbcdd6de93f1848fde94d1740e46e9232b2530de91f229fbd570cda0c7586e7edf8596ec257924')
+
+build() {
+  cd "$_pkgname-$pkgver"
+
+  python setup.py build
+}
+
+package() {
+  cd "$_pkgname-$pkgver"
+
+  python setup.py install --root="$pkgdir" --prefix=/usr --optimize=1 \
+    --skip-build
+}
+

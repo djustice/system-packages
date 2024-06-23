@@ -1,0 +1,57 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=semgrep
+pkgver=1.72.0
+_pyver=3.12
+_py=cp38.cp39.cp310.cp311.py37.py38.py39.py310.py311
+pkgrel=3
+pkgdesc='Lightweight static analysis for many languages.'
+arch=('x86_64')
+groups=('system' 'system-code-audit')
+url='https://pypi.org/project/semgrep/#files'
+license=('LGPL')
+depends=('python' 'python-attrs' 'python-boltons' 'python-colorama'
+         'python-click' 'python-click-option-group' 'python-glom'
+         'python-requests' 'python-ruamel-yaml' 'python-tqdm' 'python-packaging'
+         'python-jsonschema' 'python-wcmatch' 'python-peewee'
+         'python-defusedxml' 'python-urllib3' 'python-typing_extensions'
+         'python-lsp-jsonrpc' 'python-tomli' 'python-rich' 'python-exceptiongroup')
+makedepends=('python-build' 'python-pip' 'python-wheel')
+replaces=('python-semgrep')
+source=("https://files.pythonhosted.org/packages/source/${pkgname::1}/$pkgname/$pkgname-$pkgver.tar.gz"
+        "https://files.pythonhosted.org/packages/$_py/${pkgname::1}/$pkgname/${pkgname//-/_}-$pkgver-$_py-none-any.whl")
+sha512sums=('49c44206a43f3539b97765427de4d3b897ce6c84c650e5731895cf2e72d2b887beb45e4e5e427533114265b984f6ba559ed105fd4723e08b3f7bf2750f418698'
+            '9b1ce14dbe62277473862c6b36ab105847d63d59bacd356f94268e3388d7ee6c7a1d07cc00d709b11dbbd9a692597f2e4222021410444bb7a755e93b02eb0010')
+
+build() {
+  cd "$pkgname-$pkgver"
+
+  export SEMGREP_CORE_BIN="$srcdir/$pkgname-$pkgver.data/purelib/$pkgname/bin/$pkgname-core"
+
+  python -m build --wheel --outdir="$startdir/dist"
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+
+  pip install \
+    --verbose \
+    --disable-pip-version-check \
+    --no-warn-script-location \
+    --ignore-installed \
+    --no-compile \
+    --no-deps \
+    --root="$pkgdir" \
+    --prefix=/usr \
+    --no-index \
+    --find-links="file://$startdir/dist" \
+    "$pkgname"
+
+  install -Dm 555 \
+    "$srcdir/$pkgname-$pkgver.data/purelib/$pkgname/bin/$pkgname-core" \
+    "$pkgdir/usr/lib/python$_pyver/site-packages/$pkgname/bin/$pkgname-core"
+  strip "$pkgdir/usr/lib/python$_pyver/site-packages/$pkgname/bin/$pkgname-core"
+}
+

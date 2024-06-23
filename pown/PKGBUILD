@@ -1,0 +1,37 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=pown
+pkgver=332.0e32edf
+pkgrel=1
+groups=('system' 'system-webapp' 'system-recon' 'system-scanner'
+        'system-social' 'system-proxy')
+pkgdesc='Security testing and exploitation toolkit built on top of Node.js and NPM.'
+url='https://github.com/pownjs/pown'
+arch=('any')
+license=('MIT')
+depends=('nodejs')
+makedepends=('git' 'npm')
+source=("git+https://github.com/pownjs/$pkgname.git")
+sha512sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+
+  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+}
+
+package() {
+  cd $pkgname
+
+  _npmdir="$pkgdir/usr/lib/node_modules/"
+
+  install -dm 755 $_npmdir
+
+  cd $_npmdir
+
+  npm install --user root -g --prefix "$pkgdir/usr" $pkgname@
+  rm -rf "$_npmdir/root"
+}
+

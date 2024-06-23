@@ -4,7 +4,7 @@
 
 pkgbase=api-dnsdumpster
 pkgname=('python2-api-dnsdumpster' 'python-api-dnsdumpster')
-pkgver=79.0f8ba2b
+pkgver=.0f8ba2b
 pkgrel=1
 groups=('system' 'system-recon' 'system-scanner')
 pkgdesc='Unofficial Python API for http://dnsdumpster.com/.'

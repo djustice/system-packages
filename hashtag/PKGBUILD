@@ -1,0 +1,35 @@
+#
+# system-linux.com rebuild alpha - djustice@system-linux.com
+#
+
+pkgname=hashtag
+pkgver=0.41
+pkgrel=7
+groups=('system' 'system-cracker')
+pkgdesc='A python script written to parse and identify password hashes.'
+url='https://github.com/SmeegeSec/HashTag'
+arch=('any')
+license=('custom:unknown')
+depends=('python2')
+makedepends=('git')
+source=("$pkgname::git+https://github.com/SmeegeSec/HashTag.git")
+sha512sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+
+  cat README.txt | grep -Ewi "Version" | awk '{ print $NF }'
+}
+
+prepare() {
+  cd $pkgname
+
+  sed -i 's/python/python2/' HashTag.py
+}
+
+package() {
+  cd $pkgname
+
+  install -Dm 755 HashTag.py "$pkgdir/usr/bin/$pkgname"
+}
+
