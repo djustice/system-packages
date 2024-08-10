@@ -3,8 +3,8 @@
 #
 
 pkgname=abcd
-pkgver=.2738809
-pkgrel=1
+pkgver=4.2738809
+pkgrel=2
 pkgdesc='ActionScript ByteCode Disassembler.'
 groups=('system' 'system-disassembler')
 arch=('any')

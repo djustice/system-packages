@@ -3,7 +3,7 @@
 #
 
 pkgname=a2sv
-pkgver=.cb24c4e
+pkgver=140.cb24c4e
 pkgrel=1
 pkgdesc='Auto Scanning to SSL Vulnerability.'
 groups=('system' 'system-scanner')
