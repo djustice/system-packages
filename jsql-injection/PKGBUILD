@@ -3,7 +3,7 @@
 #
 
 pkgname=jsql-injection
-pkgver=0.95
+pkgver=0.101
 pkgrel=1
 pkgdesc='A Java application for automatic SQL database injection.'
 groups=('system' 'system-webapp' 'system-exploitation'
@@ -15,7 +15,7 @@ depends=('java-environment')
 makedepends=('git')
 noextract=("$pkgname-v$pkgver.jar")
 source=("https://github.com/ron190/jsql-injection/releases/download/v$pkgver/$pkgname-v$pkgver.jar")
-sha512sums=('e9ae8abb5ea5a3ece83ebcc0b6f41bff89f57e9ea59160b30640f899b2dba85e8836fc9d7b189b71dc3c9fa7cef6359b432b2e200b6ead65f3379cf8a04a77da')
+sha512sums=('d2804e9b316b56773b3c36124b0c06fece41cfc355536f555aea5dedf5db51d44adc2aa5f55c1bf7e2c201d9c64db462dbd6325b43298d3ace7e9d734b84338c')
 
 package() {
   install -dm 755 "$pkgdir/usr/bin"

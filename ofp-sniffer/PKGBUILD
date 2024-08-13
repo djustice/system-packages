@@ -3,8 +3,8 @@
 #
 
 pkgname=ofp-sniffer
-pkgver=189.3898088
-pkgrel=6
+pkgver=230.4b79b6c
+pkgrel=1
 pkgdesc='An OpenFlow sniffer to help network troubleshooting in production networks.'
 groups=('system' 'system-sniffer')
 arch=('any')

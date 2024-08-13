@@ -3,7 +3,7 @@
 #
 
 pkgname=libosmocore
-pkgver=4248.2d10ff20
+pkgver=4891.11af846d
 pkgrel=1
 epoch=1
 pkgdesc='Collection of common code used in various sub-projects inside the Osmocom family of projects.'

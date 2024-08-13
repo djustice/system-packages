@@ -3,7 +3,7 @@
 #
 
 pkgname=payloadsallthethings
-pkgver=1914.f723bcb
+pkgver=1928.314e4da
 pkgrel=1
 pkgdesc='A list of useful payloads and bypass for Web Application Security and Pentest/CTF.'
 groups=('system' 'system-misc')

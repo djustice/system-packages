@@ -3,8 +3,8 @@
 #
 
 pkgname=atlas
-pkgver=.77bd6c8
-pkgrel=1
+pkgver=7.77bd6c8
+pkgrel=5
 pkgdesc='Open source tool that can suggest sqlmap tampers to bypass WAF/IDS/IPS.'
 arch=('any')
 groups=('system' 'system-webapp' 'system-fuzzer')

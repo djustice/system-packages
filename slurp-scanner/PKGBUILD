@@ -3,8 +3,8 @@
 #
 
 pkgname=slurp-scanner
-pkgver=90.6a4eaaf
-pkgrel=2
+pkgver=93.2dea27e
+pkgrel=1
 groups=('system' 'system-scanner')
 pkgdesc='Evaluate the security of S3 buckets.'
 arch=('x86_64' 'aarch64')

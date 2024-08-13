@@ -3,7 +3,7 @@
 #
 
 pkgname=httpx
-pkgver=1850.76e61cc
+pkgver=2129.5f806a8
 pkgrel=1
 groups=('system' 'system-webapp' 'system-scanner')
 pkgdesc='A fast and multi-purpose HTTP toolkit allow to run multiple probers using retryablehttp library.'

@@ -3,7 +3,7 @@
 #
 
 pkgname=theharvester
-pkgver=3621.1bf65d86
+pkgver=3690.f270267f
 pkgrel=1
 groups=('system' 'system-recon')
 pkgdesc='Python tool for gathering e-mail accounts and subdomain names from different public sources (search engines, pgp key servers).'

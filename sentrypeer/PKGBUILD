@@ -3,7 +3,7 @@
 #
 
 pkgname=sentrypeer
-pkgver=v3.0.0.r14.g02173c8
+pkgver=v3.0.2.r54.g275fcbf
 pkgrel=1
 pkgdesc='Protect SIP Servers from bad actors.'
 arch=('x86_64' 'aarch64')

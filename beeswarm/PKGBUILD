@@ -3,8 +3,8 @@
 #
 
 pkgname=beeswarm
-pkgver=.db51ea0
-pkgrel=1
+pkgver=1183.db51ea0
+pkgrel=6
 groups=('system' 'system-honeypot')
 pkgdesc='Honeypot deployment made easy.'
 arch=('any')

@@ -3,7 +3,7 @@
 #
 
 pkgname=aws-inventory
-pkgver=.9a2fa8e
+pkgver=19.9a2fa8e
 pkgrel=1
 pkgdesc='Discover resources created in an AWS account.'
 groups=('system' 'system-recon')

@@ -3,7 +3,7 @@
 #
 
 pkgname=finalrecon
-pkgver=167.fd6c220
+pkgver=185.2074bbd
 pkgrel=1
 pkgdesc='OSINT Tool for All-In-One Web Reconnaissance.'
 arch=('any')

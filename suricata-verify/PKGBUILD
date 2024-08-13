@@ -3,7 +3,7 @@
 #
 
 pkgname=suricata-verify
-pkgver=1210.1e61ec90
+pkgver=1322.e4f9762d
 pkgrel=1
 pkgdesc='Suricata Verification Tests - Testing Suricata Output.'
 groups=('system' 'system-misc' 'system-ids')

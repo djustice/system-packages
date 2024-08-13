@@ -3,7 +3,7 @@
 #
 
 pkgname=exabgp
-pkgver=5132.7efbbf5a
+pkgver=5221.d09208c2
 pkgrel=1
 groups=('system' 'system-networking' 'system-defensive')
 pkgdesc='The BGP swiss army knife of networking.'

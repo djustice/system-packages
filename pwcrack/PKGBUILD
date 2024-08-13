@@ -4,7 +4,7 @@
 
 pkgname=pwcrack
 pkgver=368.b6fba8a
-pkgrel=1
+pkgrel=2
 groups=('system' 'system-cracker')
 pkgdesc='Password hash automatic cracking framework.'
 arch=('any')

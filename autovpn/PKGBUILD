@@ -3,8 +3,8 @@
 #
 
 pkgname=autovpn
-pkgver=.28b1a87
-pkgrel=1
+pkgver=18.28b1a87
+pkgrel=4
 pkgdesc='Easily connect to a VPN in a country of your choice.'
 groups=('system' 'system-networking' 'system-automation')
 arch=('x86_64' 'aarch64')

@@ -3,7 +3,7 @@
 #
 
 pkgname=gps-sdr-sim
-pkgver=214.dc65ee8
+pkgver=217.ca37535
 pkgrel=1
 pkgdesc='Software-Defined GPS Signal Simulator.'
 groups=('system' 'system-radio')

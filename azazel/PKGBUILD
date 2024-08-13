@@ -3,7 +3,7 @@
 #
 
 pkgname=azazel
-pkgver=.a41fbb5
+pkgver=15.a41fbb5
 pkgrel=1
 groups=('system' 'system-backdoor')
 pkgdesc='A userland rootkit based off of the original LD_PRELOAD technique from Jynx rootkit.'

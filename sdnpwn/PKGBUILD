@@ -3,8 +3,8 @@
 #
 
 pkgname=sdnpwn
-pkgver=79.f4e2692
-pkgrel=2
+pkgver=84.f58cb21
+pkgrel=1
 pkgdesc='An SDN penetration testing toolkit.'
 groups=('system' 'system-scanner' 'system-networking')
 arch=('any')

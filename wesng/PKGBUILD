@@ -3,7 +3,7 @@
 #
 
 pkgname=wesng
-pkgver=334.0d439f0
+pkgver=358.0663f53
 pkgrel=1
 pkgdesc='Windows Exploit Suggester - Next Generation.'
 arch=('any')

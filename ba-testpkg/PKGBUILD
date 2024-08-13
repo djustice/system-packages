@@ -3,7 +3,7 @@
 #
 
 pkgname=ba-testpkg
-pkgver=10.2
+pkgver=10.5
 pkgrel=1
 groups=('system' 'system-misc')
 pkgdesc='BlackArch Linux Test Package.'

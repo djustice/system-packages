@@ -3,8 +3,8 @@
 #
 
 pkgname=backdoorme
-pkgver=.f9755ca
-pkgrel=1
+pkgver=308.f9755ca
+pkgrel=6
 pkgdesc='A powerful utility capable of backdooring Unix machines with a slew of backdoors.'
 groups=('system' 'system-backdoor' 'system-automation')
 arch=('any')

@@ -3,8 +3,8 @@
 #
 
 pkgname=domato
-pkgver=123.8083920
-pkgrel=3
+pkgver=125.739329a
+pkgrel=1
 pkgdesc='DOM fuzzer.'
 groups=('system' 'system-fuzzer')
 arch=('any')

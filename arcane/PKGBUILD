@@ -3,8 +3,8 @@
 #
 
 pkgname=arcane
-pkgver=.750cb9f
-pkgrel=1
+pkgver=2.750cb9f
+pkgrel=2
 pkgdesc='Backdoor iOS packages and create the necessary resources for APT repositories.'
 groups=('system' 'system-mobile' 'system-backdoor')
 arch=('any')

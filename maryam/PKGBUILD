@@ -3,7 +3,7 @@
 #
 
 pkgname=maryam
-pkgver=v.2.5.2.r1.g651eb9e77
+pkgver=v.2.5.3.r0.g0440c02b8
 pkgrel=1
 epoch=3
 pkgdesc='Full-featured Web Identification framework written in Python.'

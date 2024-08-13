@@ -3,8 +3,8 @@
 #
 
 pkgname=assetfinder
-pkgver=.4e95d87
-pkgrel=1
+pkgver=19.4e95d87
+pkgrel=2
 groups=('system' 'system-scanner' 'system-recon')
 pkgdesc='Find domains and subdomains potentially related to a given domain.'
 arch=('x86_64' 'aarch64')

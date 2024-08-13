@@ -3,7 +3,7 @@
 #
 
 pkgname=whatsmyname
-pkgver=2320.52b5d69
+pkgver=2373.c4e3f53
 pkgrel=1
 pkgdesc='Tool to perform user and username enumeration on various websites.'
 groups=('system' 'system-social' 'system-recon')

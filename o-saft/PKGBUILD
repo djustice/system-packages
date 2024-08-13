@@ -3,7 +3,7 @@
 #
 
 pkgname=o-saft
-pkgver=6090.57719fa6
+pkgver=6603.21b1be8b
 pkgrel=1
 groups=('system' 'system-scanner' 'system-recon')
 pkgdesc='A tool to show informations about SSL certificate and tests the SSL connection according given list of ciphers and various SSL configurations.'

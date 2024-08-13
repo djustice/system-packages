@@ -3,8 +3,8 @@
 #
 
 pkgname=anti-xss
-pkgver=.2725dc9
-pkgrel=1
+pkgver=166.2725dc9
+pkgrel=2
 pkgdesc='A XSS vulnerability scanner.'
 groups=('system' 'system-webapp' 'system-scanner')
 arch=('any')

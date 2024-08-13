@@ -3,8 +3,8 @@
 #
 
 pkgname=beebug
-pkgver=.cddb375
-pkgrel=1
+pkgver=25.cddb375
+pkgrel=5
 pkgdesc='A tool for checking exploitability.'
 arch=('any')
 groups=('system' 'system-decompiler' 'system-disassembler'

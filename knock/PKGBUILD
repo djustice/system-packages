@@ -3,7 +3,7 @@
 #
 
 pkgname=knock
-pkgver=92.0ea3c81
+pkgver=96.0c6ea4f
 pkgrel=1
 epoch=2
 groups=('system' 'system-scanner' 'system-recon')

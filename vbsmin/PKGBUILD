@@ -3,8 +3,8 @@
 #
 
 pkgname=vbsmin
-pkgver=v1.1.0.r108.g78ee23b
-pkgrel=1
+pkgver=v1.1.0.r116.g87510e7
+pkgrel=2
 groups=('system' 'system-packer' 'system-automation')
 pkgdesc='VBScript minifier.'
 arch=('any')

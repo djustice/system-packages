@@ -3,7 +3,7 @@
 #
 
 pkgname=phpstan
-pkgver=10806.3cb6d5957
+pkgver=11186.e2e36b284
 pkgrel=1
 pkgdesc='PHP Static Analysis Tool - discover bugs in your code without running it.'
 groups=('system' 'system-code-audit')

@@ -3,7 +3,7 @@
 #
 
 pkgname=radare2-unicorn
-pkgver=851.167e5c4
+pkgver=861.663b25a
 pkgrel=1
 pkgdesc='Unicorn Emulator Plugin for radare2.'
 groups=('system' 'system-disassembler' 'system-binary'

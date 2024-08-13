@@ -3,8 +3,8 @@
 #
 
 pkgname=belati
-pkgver=.49577a1
-pkgrel=1
+pkgver=72.49577a1
+pkgrel=5
 pkgdesc='The Traditional Swiss Army Knife for OSINT.'
 groups=('system' 'system-scanner' 'system-recon' 'system-webapp')
 arch=('any')

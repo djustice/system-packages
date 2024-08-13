@@ -3,7 +3,7 @@
 #
 
 pkgname=zeek
-pkgver=v7.0.0.dev.r268.g1a0fffd71
+pkgver=v7.1.0.dev.r147.g44a3ed676
 pkgrel=1
 epoch=1
 groups=('system' 'system-networking' 'system-defensive'

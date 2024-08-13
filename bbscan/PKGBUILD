@@ -3,7 +3,7 @@
 #
 
 pkgname=bbscan
-pkgver=.6731879
+pkgver=52.6731879
 pkgrel=1
 pkgdesc='A tiny Batch web vulnerability Scanner.'
 groups=('system' 'system-webapp' 'system-scanner' 'system-fuzzer')

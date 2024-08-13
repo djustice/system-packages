@@ -4,7 +4,7 @@
 
 pkgname=zackattack
 pkgver=5.1f96c14
-pkgrel=8
+pkgrel=9
 pkgdesc='A new tool set to do NTLM Authentication relaying unlike any other tool currently out there.'
 groups=('system' 'system-networking' 'system-scanner'
         'system-cracker')

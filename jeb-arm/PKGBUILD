@@ -3,8 +3,8 @@
 #
 
 pkgname=jeb-arm
-pkgver=3.0.3.201809240610
-pkgrel=2
+pkgver=5.14.0.202406122044
+pkgrel=1
 pkgdesc='Arm decompiler.'
 arch=('any')
 groups=('system' 'system-reversing')

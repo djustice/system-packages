@@ -3,8 +3,8 @@
 #
 
 pkgname=pcredz
-pkgver=84.27b39a6
-pkgrel=2
+pkgver=85.6c906f1
+pkgrel=1
 groups=('system' 'system-scanner')
 pkgdesc='A tool that extracts credit card numbers and more from a pcap file or from a live interface.'
 arch=('any')

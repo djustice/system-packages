@@ -3,8 +3,8 @@
 #
 
 pkgname=barq
-pkgver=.6f1a68c
-pkgrel=1
+pkgver=35.6f1a68c
+pkgrel=5
 pkgdesc='An AWS Cloud Post Exploitation framework.'
 arch=('any')
 groups=('system' 'system-exploitation' 'system-backdoor'

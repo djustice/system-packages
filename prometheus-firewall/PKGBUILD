@@ -4,7 +4,7 @@
 
 pkgname=prometheus-firewall
 pkgver=176.a316d66
-pkgrel=7
+pkgrel=8
 groups=('system' 'system-networking')
 pkgdesc='A Firewall analyzer written in ruby'
 arch=('any')

@@ -3,8 +3,8 @@
 #
 
 pkgname=aranea
-pkgver=.469b9ee
-pkgrel=1
+pkgver=6.469b9ee
+pkgrel=3
 groups=('system' 'system-spoof')
 pkgdesc='A fast and clean dns spoofing tool.'
 arch=('any')

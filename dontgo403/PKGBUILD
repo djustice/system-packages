@@ -3,7 +3,7 @@
 #
 
 pkgname=dontgo403
-pkgver=1.0.1.r0.g83d2bf0
+pkgver=1.0.1.r11.ga47e83b
 pkgrel=1
 pkgdesc='Tool to bypass 40X response codes..'
 arch=('x86_64' 'aarch64')

@@ -3,7 +3,7 @@
 #
 
 pkgname=bingoo
-pkgver=.698132f
+pkgver=3.698132f
 pkgrel=1
 pkgdesc='A Linux bash based Bing and Google Dorking Tool.'
 groups=('system' 'system-scanner')

@@ -3,7 +3,7 @@
 #
 
 pkgname=seclists
-pkgver=2100.8bb957d2
+pkgver=3679.444fd5f0
 pkgrel=1
 pkgdesc='A collection of multiple types of lists used during security assessments.'
 groups=('system-exploitation')

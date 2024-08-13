@@ -3,8 +3,8 @@
 #
 
 pkgname=ptf
-pkgver=1491.f87dfa8
-pkgrel=3
+pkgver=1503.e9ff60b
+pkgrel=1
 groups=('system' 'system-exploitation' 'system-scanner'
         'system-recon' 'system-automation')
 pkgdesc='The Penetration Testers Framework: Way for modular support for up-to-date tools.'

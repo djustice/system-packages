@@ -3,7 +3,7 @@
 #
 
 pkgname=passivedns
-pkgver=292.c411c46
+pkgver=297.be48a8e
 pkgrel=1
 groups=('system' 'system-sniffer')
 pkgdesc='A network sniffer that logs all DNS server replies for use in a passive DNS setup.'

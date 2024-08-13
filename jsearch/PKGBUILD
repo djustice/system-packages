@@ -3,8 +3,8 @@
 #
 
 pkgname=jsearch
-pkgver=34.15a5285
-pkgrel=5
+pkgver=44.87cf9c1
+pkgrel=1
 pkgdesc='Simple script that grep infos from javascript files.'
 arch=('any')
 groups=('system' 'system-recon' 'system-webapp')

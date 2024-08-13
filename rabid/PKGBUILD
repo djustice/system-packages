@@ -3,8 +3,8 @@
 #
 
 pkgname=rabid
-pkgver=v0.1.0.r112.gd794e0c
-pkgrel=1
+pkgver=v0.1.0.r119.gaeb1cfc
+pkgrel=2
 epoch=1
 groups=('system' 'system-webapp' 'system-misc')
 pkgdesc='A CLI tool and library allowing to simply decode all kind of BigIP cookies'

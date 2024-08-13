@@ -3,7 +3,7 @@
 #
 
 pkgname=albatar
-pkgver=.4e63f22
+pkgver=34.4e63f22
 pkgrel=1
 pkgdesc='A SQLi exploitation framework in Python.'
 groups=('system' 'system-webapp' 'system-exploitation')

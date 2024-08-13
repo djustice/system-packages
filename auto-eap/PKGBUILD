@@ -3,7 +3,7 @@
 #
 
 pkgname=auto-eap
-pkgver=.ee36d37
+pkgver=18.ee36d37
 pkgrel=1
 pkgdesc='Automated Brute-Force Login Attacks Against EAP Networks.'
 groups=('system' 'system-wireless' 'system-cracker')

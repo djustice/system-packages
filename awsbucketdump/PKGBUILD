@@ -3,8 +3,8 @@
 #
 
 pkgname=awsbucketdump
-pkgver=.4684670
-pkgrel=1
+pkgver=82.4684670
+pkgrel=3
 pkgdesc='A tool to quickly enumerate AWS S3 buckets to look for loot.'
 groups=('system' 'system-automation' 'system-scanner')
 arch=('any')

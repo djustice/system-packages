@@ -3,7 +3,7 @@
 #
 
 pkgname=backfuzz
-pkgver=.b0648de
+pkgver=1.b0648de
 pkgrel=1
 epoch=1
 groups=('system' 'system-fuzzer' 'system-networking')

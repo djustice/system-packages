@@ -3,7 +3,7 @@
 #
 
 pkgname=eyewitness
-pkgver=1108.e4cd0b7
+pkgver=1145.cb09a84
 pkgrel=1
 groups=('system' 'system-webapp' 'system-recon' 'system-misc')
 pkgdesc='Designed to take screenshots of websites, provide some server header info, and identify default credentials if possible.'

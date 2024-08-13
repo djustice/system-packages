@@ -3,8 +3,8 @@
 #
 
 pkgname=barf
-pkgver=.9547ef8
-pkgrel=1
+pkgver=923.9547ef8
+pkgrel=6
 pkgdesc='A multiplatform open source Binary Analysis and Reverse engineering Framework.'
 groups=('system' 'system-binary' 'system-reversing')
 arch=('any')

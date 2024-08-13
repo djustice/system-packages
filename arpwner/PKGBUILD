@@ -3,8 +3,8 @@
 #
 
 pkgname=arpwner
-pkgver=.f300fdf
-pkgrel=1
+pkgver=26.f300fdf
+pkgrel=3
 arch=('any')
 groups=('system' 'system-networking')
 pkgdesc='GUI-based python tool for arp poisoning and dns poisoning attacks.'

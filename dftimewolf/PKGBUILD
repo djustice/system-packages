@@ -3,9 +3,9 @@
 #
 
 pkgname=dftimewolf
-pkgver=683.3b74851e
+pkgver=712.96ec5499
 pkgrel=1
-pkgdesc='Framework for orchestrating forensic collection, processing and data export .'
+pkgdesc='Framework for orchestrating forensic collection, processing and data export.'
 arch=('any')
 groups=('system' 'system-forensic')
 url='https://github.com/log2timeline/dftimewolf'
@@ -43,6 +43,6 @@ source venv/bin/activate
 exec python $pkgname/cli/${pkgname}_recipes.py "\$@"
 EOF
 
-  chmod a+x "$pkgdir/usr/bin/$pkgname"
+  chmod +x "$pkgdir/usr/bin/$pkgname"
 }
 

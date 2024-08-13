@@ -4,7 +4,7 @@
 
 pkgname=smbexec
 pkgver=59.a54fc14
-pkgrel=8
+pkgrel=9
 epoch=2
 groups=('system' 'system-scanner' 'system-recon' 'system-fuzzer'
         'system-exploitation')

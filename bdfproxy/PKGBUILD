@@ -3,7 +3,7 @@
 #
 
 pkgname=bdfproxy
-pkgver=.276c367
+pkgver=107.276c367
 pkgrel=1
 groups=('system' 'system-proxy' 'system-binary')
 pkgdesc='Patch Binaries via MITM: BackdoorFactory + mitmProxy'

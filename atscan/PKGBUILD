@@ -3,7 +3,7 @@
 #
 
 pkgname=atscan
-pkgver=.5f774e9
+pkgver=2461.06521a9
 pkgrel=1
 groups=('system' 'system-scanner' 'system-webapp' 'system-fuzzer'
         'system-exploitation' 'system-automation')

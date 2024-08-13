@@ -3,7 +3,7 @@
 #
 
 pkgname=dnstwist
-pkgver=626.2562e2f
+pkgver=634.e1ee1d3
 pkgrel=1
 groups=('system' 'system-scanner' 'system-recon')
 pkgdesc='Domain name permutation engine for detecting typo squatting, phishing and corporate espionage.'

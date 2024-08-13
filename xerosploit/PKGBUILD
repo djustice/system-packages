@@ -4,7 +4,7 @@
 
 pkgname=xerosploit
 pkgver=38.e2c3c7b
-pkgrel=1
+pkgrel=2
 pkgdesc='Efficient and advanced man in the middle framework.'
 groups=('system' 'system-networking' 'system-exploitation'
         'system-sniffer')

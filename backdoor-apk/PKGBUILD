@@ -3,7 +3,7 @@
 #
 
 pkgname=backdoor-apk
-pkgver=.2710126
+pkgver=141.2710126
 pkgrel=1
 pkgdesc='Shell script that simplifies the process of adding a backdoor to any Android APK file'
 arch=('any')

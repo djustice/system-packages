@@ -4,7 +4,7 @@
 
 pkgname=ilo4-toolbox
 pkgver=47.672a5d6
-pkgrel=1
+pkgrel=2
 pkgdesc='Toolbox for HPE iLO4 analysis.'
 groups=('system' 'system-scanner' 'system-automation'
         'system-backdoor')

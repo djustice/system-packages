@@ -3,7 +3,7 @@
 #
 
 pkgname=apt2
-pkgver=.8075cdc
+pkgver=183.8075cdc
 pkgrel=1
 pkgdesc='Automated penetration toolkit.'
 groups=('system' 'system-automation')

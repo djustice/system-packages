@@ -3,8 +3,8 @@
 #
 
 pkgname=liffy
-pkgver=13.43a9298
-pkgrel=5
+pkgver=34.4a5e844
+pkgrel=1
 epoch=1
 groups=('system' 'system-webapp' 'system-exploitation'
         'system-fuzzer')

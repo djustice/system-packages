@@ -4,7 +4,7 @@
 
 pkgname=gocabrito
 pkgver=4.33ac59a
-pkgrel=2
+pkgrel=3
 groups=('system' 'system-social')
 pkgdesc='Super organized and flexible script for sending phishing campaigns.'
 arch=('any')

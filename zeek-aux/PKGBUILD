@@ -3,7 +3,7 @@
 #
 
 pkgname=zeek-aux
-pkgver=674.400a085
+pkgver=690.8a66cd6
 pkgrel=1
 pkgdesc='Handy auxiliary programs related to the use of the Zeek Network Security Monitor.'
 groups=('system' 'system-networking' 'system-defensive'

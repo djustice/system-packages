@@ -4,7 +4,7 @@
 
 pkgname=vane
 pkgver=1899.48f9ab5
-pkgrel=9
+pkgrel=10
 groups=('system' 'system-webapp' 'system-scanner' 'system-fuzzer')
 pkgdesc='A vulnerability scanner which checks the security of WordPress installations using a black box approach.'
 arch=('any')

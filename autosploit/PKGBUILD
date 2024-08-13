@@ -3,7 +3,7 @@
 #
 
 pkgname=autosploit
-pkgver=.9a6a5ef
+pkgver=281.9a6a5ef
 pkgrel=1
 groups=('system' 'system-exploitation' 'system-automation')
 pkgdesc='Automate the exploitation of remote hosts.'

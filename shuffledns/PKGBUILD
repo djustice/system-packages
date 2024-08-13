@@ -3,7 +3,7 @@
 #
 
 pkgname=shuffledns
-pkgver=301.db34c66
+pkgver=362.1e45a1b
 pkgrel=1
 groups=('system' 'system-webapp' 'system-scanner')
 pkgdesc='A wrapper around massdns written in GO.'

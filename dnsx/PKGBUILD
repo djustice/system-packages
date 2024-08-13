@@ -3,7 +3,7 @@
 #
 
 pkgname=dnsx
-pkgver=861.6a5d788
+pkgver=929.25a6ca7
 pkgrel=1
 groups=('system' 'system-recon')
 pkgdesc='Fast and multi-purpose DNS toolkit allow to run multiple DNS queries of your choice with a list of user-supplied resolvers.'

@@ -3,8 +3,8 @@
 #
 
 pkgname=binwally
-pkgver=.0aabd8b
-pkgrel=1
+pkgver=4.0aabd8b
+pkgrel=2
 groups=('system' 'system-binary')
 pkgdesc='Binary and Directory tree comparison tool using the Fuzzy Hashing concept (ssdeep).'
 url='https://github.com/bmaia/binwally'

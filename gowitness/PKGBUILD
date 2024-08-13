@@ -3,7 +3,7 @@
 #
 
 pkgname=gowitness
-pkgver=299.6b10eae
+pkgver=303.e3aa858
 pkgrel=1
 pkgdesc='A golang, web screenshot utility using Chrome Headless.'
 arch=('x86_64' 'aarch64')

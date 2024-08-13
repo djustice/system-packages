@@ -3,7 +3,7 @@
 #
 
 pkgname=sipp
-pkgver=1472.a0fce4c
+pkgver=1479.11b5174
 pkgrel=1
 groups=('system' 'system-voip')
 pkgdesc='A free Open Source test tool / traffic generator for the SIP protocol.'

@@ -3,8 +3,8 @@
 #
 
 pkgname=backcookie
-pkgver=.6dabc38
-pkgrel=1
+pkgver=51.6dabc38
+pkgrel=3
 groups=('system' 'system-backdoor' 'system-webapp')
 pkgdesc='Small backdoor using cookie.'
 arch=('any')

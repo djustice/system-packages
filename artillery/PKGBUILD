@@ -3,8 +3,8 @@
 #
 
 pkgname=artillery
-pkgver=.805a5d8
-pkgrel=1
+pkgver=357.805a5d8
+pkgrel=5
 epoch=1
 groups=('system' 'system-defensive' 'system-honeypot')
 pkgdesc='A combination of a honeypot, file-system monitoring, system hardening, and overall health of a server to create a comprehensive way to secure a system.'

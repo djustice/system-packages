@@ -3,7 +3,7 @@
 #
 
 pkgname=astra
-pkgver=.092804a
+pkgver=489.092804a
 pkgrel=1
 pkgdesc="Automated Security Testing For REST API's."
 groups=('system' 'system-webapp' 'system-fuzzer')

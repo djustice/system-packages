@@ -3,8 +3,8 @@
 #
 
 pkgname=lfimap
-pkgver=162.245a448
-pkgrel=2
+pkgver=278.df8b226
+pkgrel=1
 epoch=1
 groups=('system' 'system-webapp' 'system-fuzzer')
 pkgdesc='Local file inclusion discovery and exploitation tool.'

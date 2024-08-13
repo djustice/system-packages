@@ -3,8 +3,8 @@
 #
 
 pkgname=beef
-pkgver=.26531fe
-pkgrel=1
+pkgver=4478.26531fe0
+pkgrel=2
 epoch=1
 groups=('system' 'system-exploitation')
 pkgdesc='The Browser Exploitation Framework that focuses on the web browser.'

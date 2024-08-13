@@ -3,7 +3,7 @@
 #
 
 pkgname=hakrevdns
-pkgver=43.c63f7f8
+pkgver=47.3001d16
 pkgrel=1
 groups=('system' 'system-recon')
 pkgdesc='Small, fast tool for performing reverse DNS lookups en masse.'

@@ -3,8 +3,8 @@
 #
 
 pkgname=smbmap
-pkgver=v1.10.2.r2.g910ab63
-pkgrel=2
+pkgver=v1.10.4.r4.gf5f3862
+pkgrel=1
 epoch=1
 groups=('system' 'system-scanner' 'system-recon')
 pkgdesc='A handy SMB enumeration tool.'

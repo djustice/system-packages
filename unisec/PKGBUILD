@@ -5,7 +5,7 @@
 pkgname=unisec
 _gemname=$pkgname
 pkgver=0.0.5
-pkgrel=1
+pkgrel=2
 pkgdesc='Unicode Security Toolkit.'
 arch=('any')
 groups=('system' 'system-misc')

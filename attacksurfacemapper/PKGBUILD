@@ -3,8 +3,8 @@
 #
 
 pkgname=attacksurfacemapper
-pkgver=.8a402ed
-pkgrel=1
+pkgver=47.8a402ed
+pkgrel=2
 pkgdesc='Tool that aims to automate the reconnaissance process.'
 arch=('any')
 groups=('system' 'system-recon' 'system-automation')

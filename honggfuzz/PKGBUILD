@@ -3,7 +3,7 @@
 #
 
 pkgname=honggfuzz
-pkgver=4104.348a4721
+pkgver=4109.b4f72b42
 pkgrel=1
 groups=('system' 'system-fuzzer' 'system-hardware')
 pkgdesc='A general-purpose fuzzer with simple, command-line interface.'

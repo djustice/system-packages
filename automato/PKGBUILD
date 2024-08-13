@@ -3,8 +3,8 @@
 #
 
 pkgname=automato
-pkgver=.0561b59
-pkgrel=1
+pkgver=33.0561b59
+pkgrel=7
 pkgdesc='Should help with automating some of the user-focused enumeration tasks during an internal penetration test.'
 groups=('system' 'system-automation' 'system-recon')
 arch=('any')

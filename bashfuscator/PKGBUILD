@@ -3,8 +3,8 @@
 #
 
 pkgname=bashfuscator
-pkgver=.7487348
-pkgrel=1
+pkgver=338.7487348
+pkgrel=5
 pkgdesc='Fully configurable and extendable Bash obfuscation framework.'
 groups=('system' 'system-automation')
 arch=('any')

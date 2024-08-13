@@ -4,7 +4,7 @@
 
 pkgname=ubiquiti-probing
 pkgver=5.c28f4c1
-pkgrel=5
+pkgrel=6
 pkgdesc='A Ubiquiti device discovery tool.'
 groups=('system' 'system-recon' 'system-scanner')
 arch=('any')

@@ -3,8 +3,8 @@
 #
 
 pkgname=airopy
-pkgver=.b83f11d
-pkgrel=1
+pkgver=5.b83f11d
+pkgrel=5
 pkgdesc='Get (wireless) clients and access points.'
 groups=('system' 'system-wireless' 'system-sniffer')
 arch=('any')

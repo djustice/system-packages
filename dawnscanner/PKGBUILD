@@ -4,7 +4,7 @@
 
 pkgname=dawnscanner
 pkgver=v2.2.0.r15.g0d647fc
-pkgrel=1
+pkgrel=2
 epoch=1
 groups=('system' 'system-webapp' 'system-scanner')
 pkgdesc='A static analysis security scanner for ruby written web applications.'

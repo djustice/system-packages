@@ -3,7 +3,7 @@
 #
 
 pkgname=maltrail
-pkgver=106392.9f91fa0e75
+pkgver=109434.5d51dd2ed7
 pkgrel=1
 pkgdesc='Malicious traffic detection system.'
 groups=('system' 'system-defensive' 'system-networking'

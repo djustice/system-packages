@@ -3,7 +3,7 @@
 #
 
 pkgname=lunar
-pkgver=798.255bdc8
+pkgver=884.0578751
 pkgrel=1
 pkgdesc='A UNIX security auditing tool based on several security frameworks.'
 groups=('system' 'system-scanner' 'system-defensive')

@@ -3,7 +3,7 @@
 #
 
 pkgname=uacme
-pkgver=281.6e36b58
+pkgver=282.ce6fb5f
 pkgrel=1
 pkgdesc='Defeating Windows User Account Control.'
 groups=('system' 'system-windows')

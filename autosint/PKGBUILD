@@ -3,7 +3,7 @@
 #
 
 pkgname=autosint
-pkgver=.25d292c
+pkgver=236.25d292c
 pkgrel=1
 pkgdesc='Tool to automate common osint tasks.'
 groups=('system' 'system-recon')

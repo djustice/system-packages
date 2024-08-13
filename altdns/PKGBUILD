@@ -3,8 +3,8 @@
 #
 
 pkgname=altdns
-pkgver=.8c1de0f
-pkgrel=1
+pkgver=76.8c1de0f
+pkgrel=5
 pkgdesc='Generates permutations, alterations and mutations of subdomains and then resolves them.'
 groups=('system' 'system-recon')
 arch=('any')

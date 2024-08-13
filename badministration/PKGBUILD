@@ -3,8 +3,8 @@
 #
 
 pkgname=badministration
-pkgver=.69e4ec2
-pkgrel=1
+pkgver=16.69e4ec2
+pkgrel=3
 pkgdesc='A tool which interfaces with management or administration applications from an offensive standpoint.'
 groups=('system' 'system-webapp' 'system-scanner'
         'system-recon' 'system-fingerprint')

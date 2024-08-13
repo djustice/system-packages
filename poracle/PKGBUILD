@@ -4,7 +4,7 @@
 
 pkgname=poracle
 pkgver=68.dcc00b0
-pkgrel=6
+pkgrel=7
 pkgdesc='A tool for demonstrating padding oracle attacks.'
 groups=('system' 'system-crypto' 'system-webapp')
 arch=('any')

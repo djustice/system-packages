@@ -3,7 +3,7 @@
 #
 
 pkgname=bgrep
-pkgver=.28029c9
+pkgver=24.28029c9
 pkgrel=1
 pkgdesc='Binary grep.'
 groups=('system' 'system-binary')

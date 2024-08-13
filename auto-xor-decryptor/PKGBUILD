@@ -3,8 +3,8 @@
 #
 
 pkgname=auto-xor-decryptor
-pkgver=.2eb176d
-pkgrel=1
+pkgver=7.2eb176d
+pkgrel=5
 groups=('system' 'system-crypto')
 pkgdesc='Automatic XOR decryptor tool.'
 arch=('any')

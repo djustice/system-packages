@@ -3,8 +3,8 @@
 #
 
 pkgname=backdoorppt
-pkgver=.d0e7f91
-pkgrel=1
+pkgver=88.d0e7f91
+pkgrel=5
 pkgdesc='Transform your payload.exe into one fake word doc (.ppt).'
 groups=('system' 'system-backdoor')
 arch=('any')

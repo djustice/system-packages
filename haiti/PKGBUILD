@@ -4,8 +4,8 @@
 
 pkgname=haiti
 _gemname=haiti-hash
-pkgver=v2.1.0.r30.g782d2c9
-pkgrel=1
+pkgver=v2.1.0.r41.gd400e77
+pkgrel=2
 groups=('system' 'system-crypto')
 pkgdesc='Hash type identifier (CLI & lib).'
 arch=('any')

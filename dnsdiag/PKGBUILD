@@ -3,8 +3,8 @@
 #
 
 pkgname=dnsdiag
-pkgver=294.695a1d4
-pkgrel=2
+pkgver=325.4c7384c
+pkgrel=1
 pkgdesc='DNS Diagnostics and Performance Measurement Tools.'
 groups=('system' 'system-networking')
 arch=('any')

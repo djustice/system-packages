@@ -3,7 +3,7 @@
 #
 
 pkgname=pex
-pkgver=564.6eaf707
+pkgver=608.2939555
 pkgrel=1
 pkgdesc='A collection of special tools for providing high quality penetration testing.'
 arch=('any')

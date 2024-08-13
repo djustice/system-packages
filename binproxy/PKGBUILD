@@ -3,8 +3,8 @@
 #
 
 pkgname=binproxy
-pkgver=.d02fce9
-pkgrel=1
+pkgver=8.d02fce9
+pkgrel=12
 groups=('system' 'system-proxy' 'system-networking')
 pkgdesc='A proxy for arbitrary TCP connections.'
 arch=('any')

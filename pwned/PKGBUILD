@@ -3,7 +3,7 @@
 #
 
 pkgname=pwned
-pkgver=2422.1688cf0
+pkgver=2496.c4bc6fe
 pkgrel=1
 pkgdesc="A command-line tool for querying the 'Have I been pwned?' service."
 groups=('system' 'system-recon')

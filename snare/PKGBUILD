@@ -3,8 +3,8 @@
 #
 
 pkgname=snare
-pkgver=187.08c69b7
-pkgrel=2
+pkgver=188.b17fdfe
+pkgrel=1
 pkgdesc='Super Next generation Advanced Reactive honeypot.'
 groups=('system' 'system-honeypot' 'system-webapp')
 arch=('any')

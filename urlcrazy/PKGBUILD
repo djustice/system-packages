@@ -4,7 +4,7 @@
 
 pkgname=urlcrazy
 pkgver=0.5
-pkgrel=13
+pkgrel=14
 groups=('system' 'system-webapp')
 pkgdesc='Generate and test domain typos and variations to detect and perform typo squatting, URL hijacking, phishing, and corporate espionage.'
 arch=('any')

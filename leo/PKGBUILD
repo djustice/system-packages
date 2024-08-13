@@ -3,7 +3,7 @@
 #
 
 pkgname=leo
-pkgver=34205.1c56b7588
+pkgver=34658.a180e9c9c
 pkgrel=1
 pkgdesc="Literate programmer's editor, outliner, and project manager."
 groups=('system' 'system-misc')

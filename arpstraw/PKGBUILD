@@ -3,8 +3,8 @@
 #
 
 pkgname=arpstraw
-pkgver=.ab40e13
-pkgrel=1
+pkgver=27.ab40e13
+pkgrel=5
 pkgdesc='Arp spoof detection tool.'
 groups=('system' 'system-defensive' 'system-sniffer')
 arch=('any')

@@ -3,8 +3,8 @@
 #
 
 pkgname=autonessus
-pkgver=.7933022
-pkgrel=1
+pkgver=24.7933022
+pkgrel=2
 pkgdesc='This script communicates with the Nessus API in an attempt to help with automating scans.'
 groups=('system' 'system-automation')
 arch=('any')

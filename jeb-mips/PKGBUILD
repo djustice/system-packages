@@ -3,7 +3,7 @@
 #
 
 pkgname=jeb-mips
-pkgver=3.0.3.201809240610
+pkgver=5.14.0.202406122044
 pkgrel=1
 epoch=1
 pkgdesc='Mips decompiler.'

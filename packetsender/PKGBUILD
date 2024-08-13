@@ -3,7 +3,7 @@
 #
 
 pkgname=packetsender
-pkgver=944.aa2fa8f
+pkgver=978.1a43150
 pkgrel=1
 groups=('system' 'system-networking')
 pkgdesc='An open source utility to allow sending and receiving TCP and UDP packets.'

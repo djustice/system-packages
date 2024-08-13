@@ -3,7 +3,7 @@
 #
 
 pkgname=didier-stevens-suite
-pkgver=386.8eb5a11
+pkgver=398.0bc0d79
 pkgrel=1
 groups=('system')
 pkgdesc='Didier Stevens Suite.'

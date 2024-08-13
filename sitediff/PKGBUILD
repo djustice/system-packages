@@ -4,7 +4,7 @@
 
 pkgname=sitediff
 pkgver=3.1383935
-pkgrel=10
+pkgrel=11
 groups=('system' 'system-webapp' 'system-fingerprint')
 pkgdesc='Fingerprint a web app using local files as the fingerprint sources.'
 arch=('any')

@@ -3,8 +3,8 @@
 #
 
 pkgname=dorkbot
-pkgver=210.fb7f946
-pkgrel=2
+pkgver=212.c91c4b9
+pkgrel=1
 pkgdesc='Command-line tool to scan Google search results for vulnerabilities.'
 groups=('system' 'system-scanner')
 arch=('any')

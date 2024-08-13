@@ -3,8 +3,8 @@
 #
 
 pkgname=jeb-webasm
-pkgver=3.0.5.201811021648
-pkgrel=2
+pkgver=5.14.0.202406122044
+pkgrel=1
 pkgdesc='WebAssembly decompiler.'
 arch=('any')
 groups=('system' 'system-reversing')

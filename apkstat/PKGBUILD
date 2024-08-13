@@ -3,8 +3,8 @@
 #
 
 pkgname=apkstat
-pkgver=.81cdad3
-pkgrel=1
+pkgver=18.81cdad3
+pkgrel=2
 pkgdesc='Automated Information Retrieval From APKs For Initial Analysis.'
 groups=('system' 'system-mobile' 'system-recon')
 arch=('any')

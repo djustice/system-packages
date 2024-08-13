@@ -3,8 +3,8 @@
 #
 
 pkgname=graphql-cop
-pkgver=1.12.r13.g597b614
-pkgrel=2
+pkgver=1.12.r20.g98da7ed
+pkgrel=1
 pkgdesc='GraphQL vulnerability scanner.'
 arch=('any')
 groups=('system' 'system-scanner' 'system-webapp')

@@ -3,8 +3,8 @@
 #
 
 pkgname=airoscript
-pkgver=.0a122ee
-pkgrel=1
+pkgver=45.0a122ee
+pkgrel=9
 epoch=2
 pkgdesc='A script to simplify the use of aircrack-ng tools.'
 arch=('any')

@@ -3,8 +3,8 @@
 #
 
 pkgname=bfac
-pkgver=.18fb0b5
-pkgrel=1
+pkgver=53.18fb0b5
+pkgrel=4
 pkgdesc="An automated tool that checks for backup artifacts that may disclose the web-application's source code."
 groups=('system' 'system-recon' 'system-webapp')
 arch=('any')

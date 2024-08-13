@@ -4,7 +4,7 @@
 
 pkgname=penbox
 pkgver=81.3b77c69
-pkgrel=6
+pkgrel=7
 groups=('system' 'system-automation')
 arch=('any')
 pkgdesc='A Penetration Testing Framework - The Tool With All The Tools.'

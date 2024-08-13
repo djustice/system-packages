@@ -3,8 +3,8 @@
 #
 
 pkgname=scratchabit
-pkgver=565.d93d759
-pkgrel=4
+pkgver=571.e52ba4b
+pkgrel=1
 pkgdesc='Easily retargetable and hackable interactive disassembler with IDAPython-compatible plugin API.'
 groups=('system' 'system-disassembler')
 arch=('any')

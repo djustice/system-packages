@@ -3,8 +3,8 @@
 #
 
 pkgname=pagodo
-pkgver=143.7b81d4b
-pkgrel=2
+pkgver=150.7f17f51
+pkgrel=1
 pkgdesc='Google dork script to collect potentially vulnerable web pages and applications on the Internet.'
 arch=('any')
 groups=('system' 'system-scanner' 'system-recon')

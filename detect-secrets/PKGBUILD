@@ -3,7 +3,7 @@
 #
 
 pkgname=detect-secrets
-pkgver=v1.5.0.r8.gb02ff0d
+pkgver=v1.5.0.r30.g6cdb79b
 pkgrel=1
 pkgdesc='An enterprise friendly way of detecting and preventing secrets in code.'
 arch=('any')
